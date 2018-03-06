@@ -1,4 +1,5 @@
 <?php
+require_once "../config/config.php";
 /**
  *
  */
@@ -13,12 +14,13 @@ class Db
   //Propiedad conector
   private $conector;
 
-  function __construct($server,$user,$pass,$db)
+  function __construct()
   {
-    $this->server=$server;
-    $this->user=$user;
-    $this->pass=$pass;
-    $this->db=$db;
+    global $config;
+    $this->server=$config["host"];
+    $this->user=$config["user"];
+    $this->pass=$config["pass"];
+    $this->db=$config["db"];
   }
 
   function conectar(){
