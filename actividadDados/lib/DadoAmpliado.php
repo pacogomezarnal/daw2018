@@ -27,8 +27,8 @@ class DadoAmpliado extends Dado
   }
 
   //Solo para el tipo TEXTO añadir lado
-  public function nuevoLadoTEXTO($lado){
-    if($this->tipoDado==self::TEXTO or $this->tipoDado==self::KAMASUTRA){
+  public function nuevoLadoTexto($lado){
+    if($thiss->tipoDado==self::TEXTO or $this->tipoDado==self::KAMASUTRA){
       $this->ladosDado[]=$lado;
     }
   }
